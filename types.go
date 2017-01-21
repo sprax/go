@@ -1,4 +1,5 @@
 
+//  http://stackoverflow.com/questions/20170275/how-to-find-a-type-of-a-object-in-golang
     
     // I found 3 ways to recognize type at runtime:
 
