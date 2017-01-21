@@ -1,3 +1,5 @@
+// Usage: go run cap.go
+
 // capacity
 package main
 
