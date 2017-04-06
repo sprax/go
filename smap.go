@@ -18,6 +18,8 @@ func main() {
 		Smap : map[string]interface{} {},
 	}
 
+    play.Smap["cat"] = "asleep"
+
 	fmt.Printf("play: %#v\n", play)
 
 	tst := "string"
