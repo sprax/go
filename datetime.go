@@ -6,8 +6,33 @@ package main
 import "fmt"
 import "time"
 
+type Gallon struct {
+	Quart
+}
+
+type Quart struct {
+	Pint
+	Cup int
+}
+
+type Pint struct {
+	Finger int
+}
+
 func main() {
+	var (
+		gal Gallon
+		qrt Quart
+	)
+
+	gal.Finger = 1
+	gal.Quart.Pint.Finger = 2
+	qrt.Cup = 3
+
 	p := fmt.Println
+	bb := []byte("abcd")
+	ss := string(bb)
+	p(ss)
 
 	// Here's a basic example of formatting a time
 	// according to RFC3339, using the corresponding layout
