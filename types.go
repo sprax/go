@@ -13,6 +13,31 @@
             return reflect.TypeOf(v).String()
     }
 
+package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    fmt.Println("Hello, playground")
+    var (
+    N int
+    S string
+    )
+    N = 2
+    S = "two"
+    
+    fmt.Printf("N: %T,  S:  %T\n", N, S)
+    
+    fmt.Printf("reflect.TypeOf(N):  %s\n", reflect.TypeOf(N) )
+    
+    fmt.Printf("type assertion N.(type): %v", N.(type))
+    
+}
+
+
     // Using type assertions
     func typeof(v interface{}) string {
         switch t := v.(type) {
