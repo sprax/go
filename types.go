@@ -1,4 +1,4 @@
-#! /bin/env go
+// go run types.go
 
 package main
 
@@ -34,6 +34,6 @@ func main() {
     
     fmt.Printf("reflect.TypeOf(N):  %s\n", reflect.TypeOf(N) )
     
-    fmt.Printf("type assertion swich as func typeof: %v", typeof(N))
+    fmt.Printf("type assertion switch as func typeof: %v\n", typeof(N))
 }
 
