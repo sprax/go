@@ -4,7 +4,7 @@ package main
 
 import (
 	"strings"
-	"golang.org/x/tour/wc"
+	"wc"
 )
 
 func WordCount(s string) map[string]int {
@@ -20,8 +20,6 @@ func main() {
 }
 
 func localTest(wc func(s string) map[string]int) {
-    m := wc("I ate a donut. Then I ate another donut.")
-    print(m)
+	m := wc("I ate a donut. Then I ate another donut.")
+	print(m)
 }
-
-
