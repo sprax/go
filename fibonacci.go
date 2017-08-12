@@ -24,4 +24,5 @@ func main() {
 		}
 		fmt.Printf("%10d, ", fib())
 	}
+	fmt.Println()
 }
