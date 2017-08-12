@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -102,4 +103,8 @@ func RandStringBytesMask(n int) string {
 		}
 	}
 	return string(b)
+}
+
+func main() {
+	fmt.Println(RandStringBytesRmndr(32))
 }
