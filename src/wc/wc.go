@@ -4,7 +4,7 @@
 
 package wc
 
-
+// If the following line is moved to the same line as package wc, the go tool will expect it.
 // import "golang.org/x/tour/wc"
 
 import "fmt"
@@ -24,11 +24,11 @@ func Test(f func(string) map[string]int) {
 			}
 		}
 		if !ok {
-			fmt.Printf("FAIL\n f(%q) =\n  %#v\n want:\n  %#v",
+			fmt.Printf("Fail\n f(%q) =\n  %#v\n want:\n  %#v",
 				c.in, got, c.want)
 			break
 		}
-		fmt.Printf("PASS\n f(%q) = \n  %#v\n", c.in, got)
+		fmt.Printf("Pass\n f(%q) = \n  %#v\n", c.in, got)
 	}
 }
 
@@ -50,4 +50,5 @@ var testCases = []struct {
 		"A": 1, "man": 1, "a": 2, "plan": 1, "canal": 1, "panama.": 1,
 	}},
 }
+
 // © 2017 GitHub, Inc. Terms Privacy Security Status Help

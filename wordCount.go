@@ -4,7 +4,8 @@ package main
 
 import (
 	"strings"
-	"wc"
+	"wc" // use local version of wc in src/lib
+	// "golang.org/x/tour/wc"		// use external version from GOPATH (~/.golang/lib)
 )
 
 func WordCount(s string) map[string]int {
