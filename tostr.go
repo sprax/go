@@ -22,4 +22,6 @@ func float2str(val float64) string {
 
 func main() {
 	fmt.Println("Hello, playground", float2str(3.14159), "what's up", bool2str(false))
+    cmd := fmt.Sprintf("add ticket for <@%s|PseudoMike> fix it", "U2YP244MN")
+    fmt.Printf("Cmd: <%s>\n", cmd)
 }
