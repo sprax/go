@@ -6,6 +6,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -22,6 +23,12 @@ func check(e error) {
 
 func main() {
 
+	inFile := os.Args[1]
+	outFile := flag.String("outFile", inFile+".out", "output file for list")
+
+	fmt.Printf("prog<%s> in<%s> out<%s>\n", os.Args[0], os.Args[1], *outFile)
+	os.Exit(0)
+
 	// Perhaps the most basic file reading task is
 	// slurping a file's entire contents into memory.
 	dat, err := ioutil.ReadFile("/tmp/dat")
@@ -33,6 +40,7 @@ func main() {
 	// by `Open`ing a file to obtain an `os.File` value.
 	f, err := os.Open("/tmp/dat")
 	check(err)
+	defer f.Close()
 
 	// Read some bytes from the beginning of the file.
 	// Allow up to 5 to be read but also note how many
@@ -75,9 +83,4 @@ func main() {
 	b4, err := r4.Peek(5)
 	check(err)
 	fmt.Printf("5 bytes: %s\n", string(b4))
-
-	// Close the file when you're done (usually this would
-	// be scheduled immediately after `Open`ing with
-	// `defer`).
-	f.Close()
 }
