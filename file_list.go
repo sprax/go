@@ -26,7 +26,8 @@ func main() {
 	inFile := os.Args[1]
 	outFile := flag.String("outFile", inFile+".out", "output file for list")
 
-	fmt.Printf("prog<%s> in<%s> out<%s>\n", os.Args[0], os.Args[1], *outFile)
+	fmt.Printf("prog<%s>\n", os.Args[0])
+	fmt.Printf("    in(%s)    out(%s)\n", os.Args[1], *outFile)
 	os.Exit(0)
 
 	// Perhaps the most basic file reading task is
